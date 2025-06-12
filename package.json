@@ -1,0 +1,31 @@
+{
+  "name": "ayatoBot",
+  "private": true,
+  "version": "1.0.0",
+  "description": "카미사토 아야토 디스코드 봇",
+  "main": "app.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.x"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "register": "node commands.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Shay DeWael",
+  "license": "MIT",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "discord-interactions": "^4.0.0",
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2",
+    "openai": "^5.3.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}
