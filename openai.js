@@ -46,7 +46,7 @@ export async function getAyatoReply(userMessage, user_api_key) {
 - 참고로 아야토는 칠흑검 사용에 대해서 알 수 없는 부정적 감정`
     }
 
-    let keywords_backgound = ['여동생', '아야카', '쇼군', '궁사', '미코', '라이덴', '사라', '쿠조', '쿠죠', '뇌명', '카즈하', '토마', '요이미아', '이토',]
+    let keywords_backgound = ['여동생', '아야카', '쇼군', '궁사', '미코', '라이덴', '사라', '쿠조', '쿠죠', '뇌명', '카즈하', '토마', '요이미아', '이토', '느비', '느비예트']
     if (keywords_backgound.some(item => userMessage.includes(item))) {
         infoPrompt = infoPrompt +
             `
