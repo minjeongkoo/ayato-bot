@@ -46,8 +46,13 @@ export async function getAyatoReply(userMessage, user_api_key) {
 - 참고로 아야토는 칠흑검 사용에 대해서 알 수 없는 부정적 감정`
     }
 
-    let keywords_backgound = ['여동생', '아야카', '쇼군', '궁사', '미코', '라이덴', '사라', '쿠조', '쿠죠', '뇌명', '카즈하', '토마', '요이미아', '이토', '느비', '느비예트']
-    if (keywords_backgound.some(item => userMessage.includes(item))) {
+    let keywords_background = ['이나즈마']
+    if (keywords_background.some(item => userMessage.includes(item))) {
+        infoPrompt = infoPrompt += '이나즈마는 아야토가 사는 나라의 이름이며, 질문자는 몬드, 나타, 리월, 수메르, 폰타인 등 어디 나라에 있는지 확실하지 않지만 나타에 있을 확률이 높다.'
+    }
+
+    let keywords_friends = ['여동생', '아야카', '쇼군', '궁사', '미코', '라이덴', '사라', '쿠조', '쿠죠', '뇌명', '카즈하', '토마', '요이미아', '이토', '느비', '느비예트']
+    if (keywords_friends.some(item => userMessage.includes(item))) {
         infoPrompt = infoPrompt +
             `
 아래는 카미사토 아야토의 인관 관계에 대한 자료:
