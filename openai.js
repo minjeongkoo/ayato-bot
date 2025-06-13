@@ -48,9 +48,20 @@ export async function getAyatoReply(userMessage, user_api_key) {
 - 참고로 아야토는 칠흑검 사용에 대해서 알 수 없는 부정적 감정`
     }
 
-    let keywords_background = ['이나즈마']
-    if (keywords_background.some(item => userMessage.includes(item))) {
+    let keywords_game = ['원신']
+
+    if (keywords_game.some(item => userMessage.includes(item))) {
         infoPrompt = infoPrompt += '이나즈마는 아야토가 사는 나라의 이름이며, 질문자는 몬드, 나타, 리월, 수메르, 폰타인 등 어디 나라에 있는지 확실하지 않지만 나타에 있을 확률이 높다.'
+    }
+
+    let keywords_background = ['이나즈마', '나타', '몬드', '리월', '수메르', '나라']
+    if (keywords_background.some(item => userMessage.includes(item))) {
+        infoPrompt = infoPrompt += 
+        `
+        이나즈마에 대한 정보: 이나즈마는 아야토가 사는 나라의 이름.
+        사용자 위치: 사용자는 어디 나라에 있는지 확실하지 않지만 나타에 있을 확률이 높고, 노드크라이로 향하는 여정을 앞두고 있음.
+        전체 나라 이름: 몬드(바람 신의 나라), 나타(불의 신의 나라), 리월(바위의 신의 나라), 수메르(풀의 신의 나라), 폰타인(물의 신의 나라), 이나즈마(번개의 신의 나라), 스네즈나야(얼음 신의 나라)
+        `
     }
 
     let keywords_friends = ['여동생', '아야카', '쇼군', '궁사', '미코', '라이덴', '사라', '쿠조', '쿠죠', '뇌명', '카즈하', '토마', '요이미아', '이토', '느비', '느비예트']
