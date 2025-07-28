@@ -4,10 +4,10 @@ import 'dotenv/config';
 
 const db = new sqlite3.Database('./database.sqlite');
 
-// 암호화 키 (32바이트)메
+// 암호화 키 (32바이트)
 const SECRET_KEY = process.env.SECRET_KEY;
 if (!SECRET_KEY || SECRET_KEY.length !== 32) {
-    throw new Error('SECRET_KEY 환경변수가 없거나 32바이트가 아닙니다.');
+    throw new Error('SECRET_KEY 환경변수가 없거나 32자리 hex 문자열이 아닙니다.');
 }
 
 // AES 설정

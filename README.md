@@ -42,7 +42,7 @@ npm install
 
 ```plain text
 DISCORD_TOKEN=디스코드봇토큰
-SECRET_KEY=32바이트랜덤키 (예: openssl rand -hex 16)
+SECRET_KEY=32자리 hex 문자열 (예: openssl rand -hex 16)
 FREE_USER_ID1=자유이용자ID (선택)
 KOO_OPENAI_API_KEY=무료 제공용 OpenAI 키 (선택)
 ```
